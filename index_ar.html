@@ -39,7 +39,9 @@
 
   <body class="font-['Rubik']">
     <!-- NAVBAR -->
-    <nav class="w-full fixed top-0 z-50 bg-black/70 backdrop-blur-md">
+    <nav
+      class="w-full fixed top-0 z-50 bg-transparent transition-colors duration-300 backdrop-blur-md"
+    >
       <div
         class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
       >
@@ -1370,6 +1372,18 @@
       document.addEventListener("click", (e) => {
         if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
           langDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+    <!-- This script changes the navbar background when the user scrolls down the page -->
+    <script>
+      const navbar = document.querySelector("nav");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 600) {
+          navbar.style.backgroundColor = "rgba(0,0,0,0.7)";
+        } else {
+          navbar.style.backgroundColor = "transparent";
         }
       });
     </script>

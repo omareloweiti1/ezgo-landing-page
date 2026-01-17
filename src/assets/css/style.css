@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+@layer components {
+.why-card {
+  @apply relative bg-white rounded-2xl p-6 overflow-hidden h-60 transition;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.why-card:hover {
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+  .why-card:hover {
+    @apply shadow-md -translate-y-1 transition;
+  }
+
+  .why-icon {
+    @apply w-18 h-18 rounded-xl
+           bg-gradient-to-b from-[#4CA663] to-[#7BCF9B]
+           flex items-center justify-center
+           text-white mb-4 shadow-md;
+  }
+  .why-card__title {
+    @apply text-2xl font-semibold text-[#0B0F0E] my-2;
+  }
+
+  .why-card__text {
+    @apply text-base text-[#4A5565] my-2;
+  }
+  .card-corner-accent {
+    @apply absolute top-0 right-0 w-24 h-24 bg-[linear-gradient(135deg,rgba(76,166,99,0.15)_0%,rgba(76,166,99,0)_98%)] rounded-bl-[96px];
+  }
+  .ezgo-footer {
+    @apply bg-gradient-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-3xl font-semibold;
+  }
+  .titel-footer {
+    @apply bg-gradient-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-lg font-semibold mb-4;
+  }
+}

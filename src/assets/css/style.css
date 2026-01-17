@@ -15,6 +15,7 @@
   /* labtop */
   --breakpoint-labtop-s: 85.375rem; /* 1366px */
   --breakpoint-labtop-m: 90rem; /* 1440px */
+  --breakpoint-labtop-ml: 94.1875rem; /* 1507px */
   --breakpoint-labtop-l: 96rem; /* 1536px */
   --breakpoint-labtop-xl: 120rem; /* 1920px */
 

@@ -1,19 +1,38 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
-body {
-  font-family: "Rubik", sans-serif;
+@theme {
+  /* mobile */
+  --breakpoint-mobile-xs: 23.4375rem; /* 375px */
+  --breakpoint-mobile-s: 24.375rem; /* 390px */
+  --breakpoint-mobile-m: 25rem; /* 400px */
+  --breakpoint-mobile-l: 25.875rem; /* 415px */
+  --breakpoint-mobile-xl: 26.875rem; /* 430px */
+
+  /* ipad */
+  --breakpoint-ipad-m: 48rem; /* 768px */
+  --breakpoint-ipad-l: 64rem; /* 1024px */
+
+  /* labtop */
+  --breakpoint-labtop-s: 85.375rem; /* 1366px */
+  --breakpoint-labtop-m: 90rem; /* 1440px */
+  --breakpoint-labtop-l: 96rem; /* 1536px */
+  --breakpoint-labtop-xl: 120rem; /* 1920px */
+
+  /* desktop */
+  --breakpoint-labtop-xxl: 160rem; /* 2560px */
+  --breakpoint-desktop-2xl: 160rem; /* 2560px */
 }
+
 
 @layer components {
-.why-card {
-  @apply relative bg-white rounded-2xl p-6 overflow-hidden h-60 transition;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-}
+  .why-card {
+    @apply relative bg-white rounded-2xl p-6 overflow-hidden h-60 transition;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  }
 
-.why-card:hover {
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-}
+  .why-card:hover {
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  }
 
   .why-card:hover {
     @apply shadow-md -translate-y-1 transition;
@@ -21,7 +40,7 @@ body {
 
   .why-icon {
     @apply w-18 h-18 rounded-xl
-           bg-gradient-to-b from-[#4CA663] to-[#7BCF9B]
+           bg-linear-to-b from-[#4CA663] to-[#7BCF9B]
            flex items-center justify-center
            text-white mb-4 shadow-md;
   }
@@ -35,10 +54,13 @@ body {
   .card-corner-accent {
     @apply absolute top-0 right-0 w-24 h-24 bg-[linear-gradient(135deg,rgba(76,166,99,0.15)_0%,rgba(76,166,99,0)_98%)] rounded-bl-[96px];
   }
+  .card-corner-accent-ar {
+    @apply absolute top-0 left-0 w-24 h-24 bg-[linear-gradient(135deg,rgba(76,166,99,0.15)_0%,rgba(76,166,99,0)_98%)] rounded-br-[96px];
+  }
   .ezgo-footer {
-    @apply bg-gradient-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-3xl font-semibold;
+    @apply bg-linear-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-3xl font-semibold;
   }
   .titel-footer {
-    @apply bg-gradient-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-lg font-semibold mb-4;
+    @apply bg-linear-to-b from-[#4CA663] to-[#7BCF9B] bg-clip-text text-transparent text-lg font-semibold ;
   }
 }
